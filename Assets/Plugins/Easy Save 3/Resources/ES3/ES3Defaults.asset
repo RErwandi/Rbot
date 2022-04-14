@@ -34,10 +34,11 @@ MonoBehaviour:
     - Assembly-CSharp
     - Sirenix.OdinInspector.CompatibilityLayer
     - Assembly-CSharp-firstpass
-    - YarnSpinner.Unity
-    - CommandsInAnAssemblyDefinition
+    - Febucci.TextAnimator.Runtime
+    - Febucci.TextAnimator.Demo.Runtime
     - Sirenix.OdinInspector.CompatibilityLayer.Editor
-    - YarnSpinner.Unity.Editor
+    - Febucci.TextAnimator.Demo.Editor
+    - Febucci.TextAnimator.Editor
     showAdvancedSettings: 0
   addMgrToSceneAutomatically: 0
   autoUpdateReferences: 1
