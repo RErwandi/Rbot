@@ -34,7 +34,10 @@ MonoBehaviour:
     - Assembly-CSharp
     - Sirenix.OdinInspector.CompatibilityLayer
     - Assembly-CSharp-firstpass
+    - YarnSpinner.Unity
+    - CommandsInAnAssemblyDefinition
     - Sirenix.OdinInspector.CompatibilityLayer.Editor
+    - YarnSpinner.Unity.Editor
     showAdvancedSettings: 0
   addMgrToSceneAutomatically: 0
   autoUpdateReferences: 1
