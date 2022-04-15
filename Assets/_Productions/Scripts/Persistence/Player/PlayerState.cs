@@ -4,4 +4,5 @@ using System.Collections.Generic;
 public class PlayerState
 {
     public List<string> answeredQuestion = new List<string>();
+    public bool isDoneWithIntro;
 }

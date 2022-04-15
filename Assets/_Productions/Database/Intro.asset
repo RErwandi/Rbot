@@ -17,5 +17,23 @@ MonoBehaviour:
     expression: Default
     alignment: 0
     useOverlay: 1
-    text: Hello Master, Let me introduce myself. I'm Rin, an android that will help
-      you find your friends.
+    text: Hello Master, Let me introduce myself. I'm Rin, an android created by R
+      Company. My objective is one... to help you find some new friends.
+  - character: Rin
+    expression: Default
+    alignment: 0
+    useOverlay: 1
+    text: Before I can find you some new friends, I need to know you better. Your
+      personality, what you like, what you hate, your hobbies, etc.
+  - character: 
+    expression: 
+    alignment: 0
+    useOverlay: 1
+    text: This information will be inputted to my friendship module algorithm to
+      find someone that match with your personality.
+  - character: Rin
+    expression: Default
+    alignment: 0
+    useOverlay: 1
+    text: And to do that, I will need you to grant me access for some permission
+      that is required.

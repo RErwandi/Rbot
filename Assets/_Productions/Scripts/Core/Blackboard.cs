@@ -2,6 +2,9 @@ using GameLokal.Toolkit;
 
 public class Blackboard : Singleton<Blackboard>
 {
+    public PlayerPersistence playerPersistence;
+    public static PlayerPersistence Player => Instance.playerPersistence;
+    
     private void Start()
     {
         InitializeAllPersistence();

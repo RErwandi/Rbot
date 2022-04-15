@@ -1,19 +1,22 @@
+using System;
 using GameLokal.Toolkit;
 using Sirenix.OdinInspector;
 using UnityEngine;
 
-public class DialogueSystem : MonoBehaviour
+public class DialogueSystem : Singleton<DialogueSystem>
 {
     public LineView lineView;
 
     private int iData;
     private DialogueData currentData;
+    private Action dialogueCallback;
 
     [Button]
-    public void Show(DialogueData data)
+    public void Show(DialogueData data, Action callback = null)
     {
         currentData = data;
         iData = 0;
+        dialogueCallback = callback;
         
         ShowCurrentDialogue();
     }
@@ -40,5 +43,6 @@ public class DialogueSystem : MonoBehaviour
     private void FinishCurrentDialogue()
     {
         lineView.Hide();
+        dialogueCallback?.Invoke();
     }
 }

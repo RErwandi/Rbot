@@ -1,4 +1,5 @@
 using System;
+using System.Collections;
 using Febucci.UI;
 using TMPro;
 using UnityEngine;
@@ -10,7 +11,7 @@ public class LineView : MonoBehaviour
     public TextAnimatorPlayer textPlayer;
 
     private Action completeShowCallback;
-    private void Start()
+    private void Awake()
     {
         Hide();
         
@@ -41,6 +42,12 @@ public class LineView : MonoBehaviour
 
     private void TextShowed()
     {
+        StartCoroutine(RunCallback());
+    }
+
+    private IEnumerator RunCallback()
+    {
+        yield return new WaitForSeconds(1f);
         completeShowCallback?.Invoke();
     }
 }
