@@ -26,11 +26,13 @@ public class LineView : MonoBehaviour
     public void Hide()
     {
         canvasGroup.alpha = 0f;
+        canvasGroup.interactable = false;
     }
 
     public void Show()
     {
         canvasGroup.alpha = 1f;
+        canvasGroup.interactable = true;
     }
 
     public void Show(string text, Action callback = null)
