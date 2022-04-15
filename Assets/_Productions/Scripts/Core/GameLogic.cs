@@ -43,7 +43,14 @@ public class GameLogic : MonoBehaviour
 
     private void Questioning()
     {
-        DialogueSystem.Instance.Show(friendship.data[iQuestion], NextQuestion);
+        if (Blackboard.Player.state.answeredQuestion.Contains(friendship.data[iQuestion].id))
+        {
+            NextQuestion();
+        }
+        else
+        {
+            DialogueSystem.Instance.Show(friendship.data[iQuestion], NextQuestion);
+        }
     }
 
     private void NextQuestion()
