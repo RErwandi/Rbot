@@ -1,18 +1,53 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class OptionListView : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    public CanvasGroup canvasGroup;
+    public RectTransform container;
+    public OptionView optionView;
+    private Action answeredCallback;
+    
+    private void Awake()
     {
-        
+        Hide();
     }
 
-    // Update is called once per frame
-    void Update()
+    public void Hide()
     {
-        
+        canvasGroup.alpha = 0f;
+    }
+
+    public void Show()
+    {
+        canvasGroup.alpha = 1f;
+    }
+
+    public void Show(List<Answer> answers, Action callback = null)
+    {
+        ResetOptions();
+        Show();
+        answeredCallback = callback;
+
+        foreach (var answer in answers)
+        {
+            var option = Instantiate(optionView, container);
+            option.Setup(answer, OnAnswered);
+        }
+    }
+
+    private void ResetOptions()
+    {
+        foreach (var option in container.GetComponentsInChildren<OptionView>())
+        {
+            Destroy(option.gameObject);
+        }
+    }
+
+    private void OnAnswered()
+    {
+        answeredCallback?.Invoke();
     }
 }

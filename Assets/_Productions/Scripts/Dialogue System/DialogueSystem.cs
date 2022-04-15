@@ -6,10 +6,13 @@ using UnityEngine;
 public class DialogueSystem : Singleton<DialogueSystem>
 {
     public LineView lineView;
+    public OptionListView optionListView;
 
     private int iData;
     private DialogueData currentData;
     private Action dialogueCallback;
+    private Question currentQuestion;
+    private Action questionCallback;
     
     public void Show(DialogueData data, Action callback = null)
     {
@@ -18,6 +21,25 @@ public class DialogueSystem : Singleton<DialogueSystem>
         dialogueCallback = callback;
         
         ShowCurrentDialogue();
+    }
+
+    public void Show(Question question, Action callback = null)
+    {
+        currentQuestion = question;
+        questionCallback = callback;
+        lineView.Show(question.questionName, ShowAnswers);
+    }
+
+    private void ShowAnswers()
+    {
+        optionListView.Show(currentQuestion.answers, OnAnswered);
+    }
+
+    private void OnAnswered()
+    {
+        lineView.Hide();
+        optionListView.Hide();
+        questionCallback?.Invoke();
     }
 
     private void ShowCurrentDialogue()

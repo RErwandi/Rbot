@@ -17,5 +17,31 @@ MonoBehaviour:
     expression: Default
     alignment: 0
     useOverlay: 1
-    text: 'So {deviceName}, I see you have {contactAmount} friends in your contact
-      list. '
+    text: Scanning your personality.........SUCCESS.
+  - character: Rin
+    expression: Default
+    alignment: 0
+    useOverlay: 1
+    text: I found 34 things that you like and 26 things that you dislike. Your hobbies
+      is appears to be Sleeping. And you happends to hate Being Lonely.
+  - character: Rin
+    expression: Default
+    alignment: 0
+    useOverlay: 1
+    text: Installing friendship module.......ERROR.
+  - character: Rin
+    expression: Default
+    alignment: 0
+    useOverlay: 1
+    text: What...is...happening...
+  - character: Rin
+    expression: Default
+    alignment: 0
+    useOverlay: 1
+    text: Oh! Hello Master, Let me introduce myself. I'm Rin, an android created
+      by R Company. My objective is one... to help you find some new friends.
+  - character: Rin
+    expression: Default
+    alignment: 0
+    useOverlay: 1
+    text: Friends.... what is friends ?
