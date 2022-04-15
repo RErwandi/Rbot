@@ -1,7 +1,5 @@
 using System;
 using GameLokal.Toolkit;
-using Sirenix.OdinInspector;
-using UnityEngine;
 
 public class DialogueSystem : Singleton<DialogueSystem>
 {
@@ -11,7 +9,7 @@ public class DialogueSystem : Singleton<DialogueSystem>
     private int iData;
     private DialogueData currentData;
     private Action dialogueCallback;
-    private Question currentQuestion;
+    private QuestionData currentQuestion;
     private Action questionCallback;
     
     public void Show(DialogueData data, Action callback = null)
@@ -23,16 +21,16 @@ public class DialogueSystem : Singleton<DialogueSystem>
         ShowCurrentDialogue();
     }
 
-    public void Show(Question question, Action callback = null)
+    public void Show(QuestionData question, Action callback = null)
     {
         currentQuestion = question;
         questionCallback = callback;
-        lineView.Show(question.questionName, ShowAnswers);
+        lineView.Show(question.question, ShowAnswers);
     }
 
     private void ShowAnswers()
     {
-        optionListView.Show(currentQuestion.answers, OnAnswered);
+        optionListView.Show(currentQuestion, OnAnswered);
     }
 
     private void OnAnswered()

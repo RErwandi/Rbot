@@ -1,6 +1,4 @@
 using System;
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class OptionListView : MonoBehaviour
@@ -25,16 +23,16 @@ public class OptionListView : MonoBehaviour
         canvasGroup.alpha = 1f;
     }
 
-    public void Show(List<Answer> answers, Action callback = null)
+    public void Show(QuestionData questionData, Action callback = null)
     {
         ResetOptions();
         Show();
         answeredCallback = callback;
 
-        foreach (var answer in answers)
+        foreach (var answer in questionData.answers)
         {
             var option = Instantiate(optionView, container);
-            option.Setup(answer, OnAnswered);
+            option.Setup(answer, questionData, OnAnswered);
         }
     }
 

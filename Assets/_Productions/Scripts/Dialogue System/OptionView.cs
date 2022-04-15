@@ -5,19 +5,20 @@ using UnityEngine;
 public class OptionView : MonoBehaviour
 {
     public ButtonManagerBasic button;
-    private Answer answer;
+    private string answer;
+    private QuestionData questionData;
     private Action onClick;
     
-    public void Setup(Answer answer, Action callback)
+    public void Setup(string answer, QuestionData questionData, Action callback)
     {
-        this.answer = answer;
-        button.buttonText = answer.answerName;
+        this.questionData = questionData;
+        button.buttonText = answer;
         onClick = callback;
     }
 
     public void OnClick()
     {
-        Blackboard.Player.state.answeredQuestion.Add(answer.name);
+        Blackboard.Player.state.answeredQuestion.Add(questionData.id);
         onClick?.Invoke();
     }
 }

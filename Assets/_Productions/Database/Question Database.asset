@@ -1,0 +1,83 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 893f1367a82403d45831753609516805, type: 3}
+  m_Name: Question Database
+  m_EditorClassIdentifier: 
+  useWeb: 1
+  csvFile: 
+  csvUrl: https://docs.google.com/spreadsheets/d/e/2PACX-1vQRGjpwTxoxwibpGxR5dfwbRKLa4QFfsx3AReNvvX0L2aNsd_5sJGQDPHKCFfUnLZzsW_b8T5YBjltT/pub?output=csv
+  data:
+  - id: question_001
+    question: Master... tell me what is the meaning of friends?
+    answers:
+    - a
+    - b
+    responses:
+    - a
+    - b
+  - id: question_002
+    question: What does having a friend actually mean to you?
+    answers:
+    - a
+    - b
+    responses:
+    - a
+    - b
+  - id: question_003
+    question: What value do friendships bring to your life?
+    answers:
+    - a
+    - b
+    responses:
+    - a
+    - b
+  - id: question_004
+    question: What qualities in a friend are most important to you?
+    answers:
+    - a
+    - b
+    responses:
+    - a
+    - b
+  - id: question_005
+    question: What qualities do you hold that make you a good friend?
+    answers:
+    - a
+    - b
+    responses:
+    - a
+    - b
+  - id: question_006
+    question: How do you offer appreciation to your friends?
+    answers:
+    - a
+    - b
+    responses:
+    - a
+    - b
+  - id: question_007
+    question: When do you need your friend(s) the most?
+    answers:
+    - a
+    - b
+    responses:
+    - a
+    - b
+  - id: question_008
+    question: Do you prefer to have a few friendships that you cultivate deeply or
+      many friends with whom you can do different things ?
+    answers:
+    - a
+    - b
+    responses:
+    - a
+    - b

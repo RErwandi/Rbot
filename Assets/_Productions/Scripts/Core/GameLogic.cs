@@ -1,15 +1,12 @@
-using System;
-using System.Collections.Generic;
 using GameLokal.Toolkit;
-using Sirenix.OdinInspector;
 using UnityEngine;
 
 public class GameLogic : MonoBehaviour
 {
     public DialogueData intro;
     public DialogueData afterIntro;
-    public List<Question> questions = new List<Question>();
-    private int iQuestion = 0;
+    public QuestionClass question;
+    private int iQuestion;
     public void Start()
     {
         if (!Blackboard.Player.state.isDoneWithIntro)
@@ -45,13 +42,13 @@ public class GameLogic : MonoBehaviour
 
     private void Questioning()
     {
-        DialogueSystem.Instance.Show(questions[iQuestion], NextQuestion);
+        DialogueSystem.Instance.Show(question.data[iQuestion], NextQuestion);
     }
 
     private void NextQuestion()
     {
         iQuestion++;
-        if (iQuestion < questions.Count)
+        if (iQuestion < question.data.Length)
         {
             Questioning(); 
         }
