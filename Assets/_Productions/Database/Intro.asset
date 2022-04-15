@@ -25,8 +25,8 @@ MonoBehaviour:
     useOverlay: 1
     text: Before I can find you some new friends, I need to know you better. Your
       personality, what you like, what you hate, your hobbies, etc.
-  - character: 
-    expression: 
+  - character: Rin
+    expression: Default
     alignment: 0
     useOverlay: 1
     text: This information will be inputted to my friendship module algorithm to

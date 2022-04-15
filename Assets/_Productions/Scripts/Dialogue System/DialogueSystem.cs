@@ -10,8 +10,7 @@ public class DialogueSystem : Singleton<DialogueSystem>
     private int iData;
     private DialogueData currentData;
     private Action dialogueCallback;
-
-    [Button]
+    
     public void Show(DialogueData data, Action callback = null)
     {
         currentData = data;
