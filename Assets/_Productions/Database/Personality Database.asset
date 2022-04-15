@@ -1,0 +1,50 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 893f1367a82403d45831753609516805, type: 3}
+  m_Name: Personality Database
+  m_EditorClassIdentifier: 
+  useWeb: 1
+  csvFile: 
+  csvUrl: https://docs.google.com/spreadsheets/d/e/2PACX-1vR9IRGCon5menxHStThtRjB35ot5X4ebspITUYJ3YOSuKEPI9lU-5Z9xgfVzENr71vKGAoMkF7jb954/pub?output=csv
+  data:
+  - id: personality_001
+    question: "What\u2019s something that scares you in life?"
+    answers:
+    - a
+    - b
+    responses:
+    - a
+    - b
+  - id: personality_002
+    question: Do you prefer the city or the country?
+    answers:
+    - a
+    - b
+    responses:
+    - a
+    - b
+  - id: personality_003
+    question: Do you prefer watching sunrise or sunset?
+    answers:
+    - a
+    - b
+    responses:
+    - a
+    - b
+  - id: personality_004
+    question: Do you think dreams hold meaning?
+    answers:
+    - a
+    - b
+    responses:
+    - a
+    - b

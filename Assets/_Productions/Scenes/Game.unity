@@ -1531,7 +1531,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   intro: {fileID: 11400000, guid: ec8d8e19969c46c4d9f8360eb2b71813, type: 2}
   afterIntro: {fileID: 11400000, guid: 9b91202e220601c4e98e9b75dbf0e9ec, type: 2}
-  question: {fileID: 11400000, guid: 5b5985f561befba4a9a306739a66f7c5, type: 2}
+  friendship: {fileID: 11400000, guid: 5b5985f561befba4a9a306739a66f7c5, type: 2}
+  personality: {fileID: 11400000, guid: 6d7092f2450f6cc4d8e6f2588eec48b7, type: 2}
 --- !u!1 &1223541567
 GameObject:
   m_ObjectHideFlags: 0

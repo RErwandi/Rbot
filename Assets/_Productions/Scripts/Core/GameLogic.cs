@@ -5,7 +5,8 @@ public class GameLogic : MonoBehaviour
 {
     public DialogueData intro;
     public DialogueData afterIntro;
-    public QuestionClass question;
+    public QuestionClass friendship;
+    public QuestionClass personality;
     private int iQuestion;
     public void Start()
     {
@@ -42,13 +43,13 @@ public class GameLogic : MonoBehaviour
 
     private void Questioning()
     {
-        DialogueSystem.Instance.Show(question.data[iQuestion], NextQuestion);
+        DialogueSystem.Instance.Show(friendship.data[iQuestion], NextQuestion);
     }
 
     private void NextQuestion()
     {
         iQuestion++;
-        if (iQuestion < question.data.Length)
+        if (iQuestion < friendship.data.Length)
         {
             Questioning(); 
         }
