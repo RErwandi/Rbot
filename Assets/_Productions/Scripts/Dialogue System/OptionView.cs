@@ -12,6 +12,7 @@ public class OptionView : MonoBehaviour
     public void Setup(string answer, QuestionData questionData, Action callback)
     {
         this.questionData = questionData;
+        this.answer = answer;
         button.buttonText = answer;
         onClick = callback;
     }
@@ -19,6 +20,7 @@ public class OptionView : MonoBehaviour
     public void OnClick()
     {
         Blackboard.Player.state.answeredQuestion.Add(questionData.id);
+        Blackboard.Player.state.answers.Add(answer);
         onClick?.Invoke();
     }
 }
