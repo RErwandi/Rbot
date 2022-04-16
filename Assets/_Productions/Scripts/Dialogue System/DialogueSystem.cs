@@ -42,7 +42,13 @@ public class DialogueSystem : Singleton<DialogueSystem>
 
     private void ShowCurrentDialogue()
     {
-        lineView.Show(currentData.dialogues[iData].text, CheckNext);
+        var dialogue = currentData.dialogues[iData];
+        lineView.Show(dialogue.text, CheckNext);
+
+        if (dialogue.useEvent && !string.IsNullOrEmpty(dialogue.eventName))
+        {
+            GameEvent.Trigger(dialogue.eventName);
+        }
     }
 
     private void CheckNext()

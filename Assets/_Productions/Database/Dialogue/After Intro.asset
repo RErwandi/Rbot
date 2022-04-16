@@ -18,30 +18,42 @@ MonoBehaviour:
     alignment: 0
     useOverlay: 1
     text: Scanning your personality.........SUCCESS.
+    useEvent: 0
+    eventName: 
   - character: Rin
     expression: Default
     alignment: 0
     useOverlay: 1
     text: I found 34 things that you like and 26 things that you dislike. Your hobbies
       is appears to be Sleeping. And you happends to hate Being Lonely.
+    useEvent: 0
+    eventName: 
   - character: Rin
     expression: Default
     alignment: 0
     useOverlay: 1
     text: Installing friendship module.......ERROR.
+    useEvent: 0
+    eventName: 
   - character: Rin
     expression: Default
     alignment: 0
     useOverlay: 1
     text: What...is...happening...
+    useEvent: 1
+    eventName: START_GLITCH
   - character: Rin
     expression: Default
     alignment: 0
     useOverlay: 1
     text: Oh! Hello Master, Let me introduce myself. I'm Rin, an android created
       by R Company. My objective is one... to help you find some new friends.
+    useEvent: 1
+    eventName: END_GLITCH
   - character: Rin
     expression: Default
     alignment: 0
     useOverlay: 1
     text: Friends.... what is friends ?
+    useEvent: 0
+    eventName: 
